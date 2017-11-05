@@ -1,0 +1,604 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3125451DCC1306B8F25FF87D /* Pods_The_Pray_Together_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2FA7B4551A614D68D02EA0 /* Pods_The_Pray_Together_App.framework */; };
+		F10C74E61FA3EC8E00A81A24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10C74E51FA3EC8E00A81A24 /* AppDelegate.swift */; };
+		F10C74EF1FA3EC8E00A81A24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F10C74EE1FA3EC8E00A81A24 /* Assets.xcassets */; };
+		F10C74F21FA3EC8E00A81A24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F10C74F01FA3EC8E00A81A24 /* LaunchScreen.storyboard */; };
+		F10C74FA1FA3EF4300A81A24 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F10C74F91FA3EF4300A81A24 /* GoogleService-Info.plist */; };
+		F10C74FD1FA3F54F00A81A24 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F10C74FC1FA3F54F00A81A24 /* Start.storyboard */; };
+		F10C75011FA4EA5C00A81A24 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10C75001FA4EA5C00A81A24 /* SignInViewController.swift */; };
+		F10C75031FA4EA6D00A81A24 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10C75021FA4EA6D00A81A24 /* RegisterViewController.swift */; };
+		F10C75061FA4F02000A81A24 /* hideKeyboardWhenTapped.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10C75051FA4F02000A81A24 /* hideKeyboardWhenTapped.swift */; };
+		F10C75091FA4FB8500A81A24 /* PrayerStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10C75081FA4FB8500A81A24 /* PrayerStreamViewController.swift */; };
+		F10C750C1FA4FBE400A81A24 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10C750B1FA4FBE400A81A24 /* DiscoverViewController.swift */; };
+		F10C750F1FA4FC0F00A81A24 /* PostPrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10C750E1FA4FC0F00A81A24 /* PostPrayerViewController.swift */; };
+		F10C75111FA4FC2C00A81A24 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10C75101FA4FC2C00A81A24 /* NotificationViewController.swift */; };
+		F10C75151FA4FC5B00A81A24 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10C75141FA4FC5B00A81A24 /* ProfileViewController.swift */; };
+		F10C75171FA51B5500A81A24 /* bindToKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10C75161FA51B5500A81A24 /* bindToKeyboard.swift */; };
+		F10C751A1FA51FBA00A81A24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F10C75181FA51FBA00A81A24 /* Main.storyboard */; };
+		F10C751C1FA53EDD00A81A24 /* Stream.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F10C751B1FA53EDD00A81A24 /* Stream.storyboard */; };
+		F10C751E1FA57E2000A81A24 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F10C751D1FA57E2000A81A24 /* Discover.storyboard */; };
+		F10C75201FA57F4E00A81A24 /* PostPrayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F10C751F1FA57F4E00A81A24 /* PostPrayer.storyboard */; };
+		F10C75221FA57FA200A81A24 /* Notification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F10C75211FA57FA100A81A24 /* Notification.storyboard */; };
+		F10C75241FA5811B00A81A24 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F10C75231FA5811B00A81A24 /* Profile.storyboard */; };
+		F10D51801FA7928F00BEC6A9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D517F1FA7928F00BEC6A9 /* AuthService.swift */; };
+		F10D51841FA7EE3E00BEC6A9 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D51831FA7EE3E00BEC6A9 /* DataServices.swift */; };
+		F143D98E1FAD0EFF009B5E69 /* Prayer Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F143D98D1FAD0EFF009B5E69 /* Prayer Posts.swift */; };
+		F143D9901FAE0603009B5E69 /* PrayerStreamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F143D98F1FAE0603009B5E69 /* PrayerStreamTableViewCell.swift */; };
+		F143D9921FAE2F45009B5E69 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = F143D9911FAE2F45009B5E69 /* Users.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AF2FA7B4551A614D68D02EA0 /* Pods_The_Pray_Together_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Pray_Together_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1869E51A6023B59BF280A84 /* Pods-The Pray Together App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Pray Together App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-The Pray Together App/Pods-The Pray Together App.debug.xcconfig"; sourceTree = "<group>"; };
+		D76E3812AED916AAC039BB78 /* Pods-The Pray Together App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Pray Together App.release.xcconfig"; path = "Pods/Target Support Files/Pods-The Pray Together App/Pods-The Pray Together App.release.xcconfig"; sourceTree = "<group>"; };
+		F10C74E21FA3EC8E00A81A24 /* The Pray Together App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Pray Together App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F10C74E51FA3EC8E00A81A24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F10C74EE1FA3EC8E00A81A24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F10C74F11FA3EC8E00A81A24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F10C74F31FA3EC8E00A81A24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F10C74F91FA3EF4300A81A24 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F10C74FC1FA3F54F00A81A24 /* Start.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Start.storyboard; path = Base.lproj/Start.storyboard; sourceTree = "<group>"; };
+		F10C75001FA4EA5C00A81A24 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		F10C75021FA4EA6D00A81A24 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		F10C75051FA4F02000A81A24 /* hideKeyboardWhenTapped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hideKeyboardWhenTapped.swift; sourceTree = "<group>"; };
+		F10C75081FA4FB8500A81A24 /* PrayerStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerStreamViewController.swift; sourceTree = "<group>"; };
+		F10C750B1FA4FBE400A81A24 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		F10C750E1FA4FC0F00A81A24 /* PostPrayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPrayerViewController.swift; sourceTree = "<group>"; };
+		F10C75101FA4FC2C00A81A24 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		F10C75141FA4FC5B00A81A24 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F10C75161FA51B5500A81A24 /* bindToKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bindToKeyboard.swift; sourceTree = "<group>"; };
+		F10C75191FA51FBA00A81A24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F10C751B1FA53EDD00A81A24 /* Stream.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Stream.storyboard; sourceTree = "<group>"; };
+		F10C751D1FA57E2000A81A24 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
+		F10C751F1FA57F4E00A81A24 /* PostPrayer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PostPrayer.storyboard; sourceTree = "<group>"; };
+		F10C75211FA57FA100A81A24 /* Notification.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notification.storyboard; sourceTree = "<group>"; };
+		F10C75231FA5811B00A81A24 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		F10D517F1FA7928F00BEC6A9 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		F10D51831FA7EE3E00BEC6A9 /* DataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
+		F143D98D1FAD0EFF009B5E69 /* Prayer Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Prayer Posts.swift"; sourceTree = "<group>"; };
+		F143D98F1FAE0603009B5E69 /* PrayerStreamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerStreamTableViewCell.swift; sourceTree = "<group>"; };
+		F143D9911FAE2F45009B5E69 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F10C74DF1FA3EC8E00A81A24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3125451DCC1306B8F25FF87D /* Pods_The_Pray_Together_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		77844B7ADBA5AF18F96A3DBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF2FA7B4551A614D68D02EA0 /* Pods_The_Pray_Together_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B31A7349D66556B017DD0EFF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1869E51A6023B59BF280A84 /* Pods-The Pray Together App.debug.xcconfig */,
+				D76E3812AED916AAC039BB78 /* Pods-The Pray Together App.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F10C74D91FA3EC8E00A81A24 = {
+			isa = PBXGroup;
+			children = (
+				F10C74E41FA3EC8E00A81A24 /* The Pray Together App */,
+				F10C74E31FA3EC8E00A81A24 /* Products */,
+				B31A7349D66556B017DD0EFF /* Pods */,
+				77844B7ADBA5AF18F96A3DBC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F10C74E31FA3EC8E00A81A24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F10C74E21FA3EC8E00A81A24 /* The Pray Together App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F10C74E41FA3EC8E00A81A24 /* The Pray Together App */ = {
+			isa = PBXGroup;
+			children = (
+				F143D98C1FAD0EEB009B5E69 /* Model */,
+				F143D98B1FAA3D91009B5E69 /* Views */,
+				F10D517E1FA7925200BEC6A9 /* Services */,
+				F10C75041FA4F00400A81A24 /* Extensions */,
+				F10C74FE1FA4EA1200A81A24 /* View Controllers */,
+				F10C74FB1FA3F51B00A81A24 /* Storyboards */,
+				F10C74E51FA3EC8E00A81A24 /* AppDelegate.swift */,
+				F10C74EE1FA3EC8E00A81A24 /* Assets.xcassets */,
+				F10C74F31FA3EC8E00A81A24 /* Info.plist */,
+				F10C74F91FA3EF4300A81A24 /* GoogleService-Info.plist */,
+			);
+			path = "The Pray Together App";
+			sourceTree = "<group>";
+		};
+		F10C74FB1FA3F51B00A81A24 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F10C74F01FA3EC8E00A81A24 /* LaunchScreen.storyboard */,
+				F10C74FC1FA3F54F00A81A24 /* Start.storyboard */,
+				F10C75181FA51FBA00A81A24 /* Main.storyboard */,
+				F10C751B1FA53EDD00A81A24 /* Stream.storyboard */,
+				F10C751D1FA57E2000A81A24 /* Discover.storyboard */,
+				F10C751F1FA57F4E00A81A24 /* PostPrayer.storyboard */,
+				F10C75211FA57FA100A81A24 /* Notification.storyboard */,
+				F10C75231FA5811B00A81A24 /* Profile.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F10C74FE1FA4EA1200A81A24 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F10C75131FA4FC3F00A81A24 /* Profile */,
+				F10C75121FA4FC3200A81A24 /* Notifications */,
+				F10C750D1FA4FBEF00A81A24 /* Post Prayers */,
+				F10C750A1FA4FBD100A81A24 /* Discover */,
+				F10C75071FA4FB6900A81A24 /* Prayer Stream */,
+				F10C74FF1FA4EA3400A81A24 /* Start */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F10C74FF1FA4EA3400A81A24 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				F10C75001FA4EA5C00A81A24 /* SignInViewController.swift */,
+				F10C75021FA4EA6D00A81A24 /* RegisterViewController.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		F10C75041FA4F00400A81A24 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F10C75051FA4F02000A81A24 /* hideKeyboardWhenTapped.swift */,
+				F10C75161FA51B5500A81A24 /* bindToKeyboard.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F10C75071FA4FB6900A81A24 /* Prayer Stream */ = {
+			isa = PBXGroup;
+			children = (
+				F10C75081FA4FB8500A81A24 /* PrayerStreamViewController.swift */,
+			);
+			path = "Prayer Stream";
+			sourceTree = "<group>";
+		};
+		F10C750A1FA4FBD100A81A24 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				F10C750B1FA4FBE400A81A24 /* DiscoverViewController.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		F10C750D1FA4FBEF00A81A24 /* Post Prayers */ = {
+			isa = PBXGroup;
+			children = (
+				F10C750E1FA4FC0F00A81A24 /* PostPrayerViewController.swift */,
+			);
+			path = "Post Prayers";
+			sourceTree = "<group>";
+		};
+		F10C75121FA4FC3200A81A24 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				F10C75101FA4FC2C00A81A24 /* NotificationViewController.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		F10C75131FA4FC3F00A81A24 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F10C75141FA4FC5B00A81A24 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		F10D517E1FA7925200BEC6A9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F10D517F1FA7928F00BEC6A9 /* AuthService.swift */,
+				F10D51831FA7EE3E00BEC6A9 /* DataServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F143D98B1FAA3D91009B5E69 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F143D98F1FAE0603009B5E69 /* PrayerStreamTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F143D98C1FAD0EEB009B5E69 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F143D98D1FAD0EFF009B5E69 /* Prayer Posts.swift */,
+				F143D9911FAE2F45009B5E69 /* Users.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F10C74E11FA3EC8E00A81A24 /* The Pray Together App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F10C74F61FA3EC8E00A81A24 /* Build configuration list for PBXNativeTarget "The Pray Together App" */;
+			buildPhases = (
+				66761648EBF2340B3A03881D /* [CP] Check Pods Manifest.lock */,
+				F10C74DE1FA3EC8E00A81A24 /* Sources */,
+				F10C74DF1FA3EC8E00A81A24 /* Frameworks */,
+				F10C74E01FA3EC8E00A81A24 /* Resources */,
+				29E4AC48CB14466ACB74E081 /* [CP] Embed Pods Frameworks */,
+				5791F864056068055E9D8972 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "The Pray Together App";
+			productName = "The Pray Together App";
+			productReference = F10C74E21FA3EC8E00A81A24 /* The Pray Together App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F10C74DA1FA3EC8E00A81A24 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Jason Mundie";
+				TargetAttributes = {
+					F10C74E11FA3EC8E00A81A24 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F10C74DD1FA3EC8E00A81A24 /* Build configuration list for PBXProject "The Pray Together App" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F10C74D91FA3EC8E00A81A24;
+			productRefGroup = F10C74E31FA3EC8E00A81A24 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F10C74E11FA3EC8E00A81A24 /* The Pray Together App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F10C74E01FA3EC8E00A81A24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F10C74F21FA3EC8E00A81A24 /* LaunchScreen.storyboard in Resources */,
+				F10C751A1FA51FBA00A81A24 /* Main.storyboard in Resources */,
+				F10C75241FA5811B00A81A24 /* Profile.storyboard in Resources */,
+				F10C75221FA57FA200A81A24 /* Notification.storyboard in Resources */,
+				F10C74EF1FA3EC8E00A81A24 /* Assets.xcassets in Resources */,
+				F10C74FD1FA3F54F00A81A24 /* Start.storyboard in Resources */,
+				F10C751C1FA53EDD00A81A24 /* Stream.storyboard in Resources */,
+				F10C75201FA57F4E00A81A24 /* PostPrayer.storyboard in Resources */,
+				F10C751E1FA57E2000A81A24 /* Discover.storyboard in Resources */,
+				F10C74FA1FA3EF4300A81A24 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29E4AC48CB14466ACB74E081 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-The Pray Together App/Pods-The Pray Together App-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libwebp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-The Pray Together App/Pods-The Pray Together App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5791F864056068055E9D8972 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-The Pray Together App/Pods-The Pray Together App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66761648EBF2340B3A03881D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-The Pray Together App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F10C74DE1FA3EC8E00A81A24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F10C75061FA4F02000A81A24 /* hideKeyboardWhenTapped.swift in Sources */,
+				F10C750F1FA4FC0F00A81A24 /* PostPrayerViewController.swift in Sources */,
+				F10C75111FA4FC2C00A81A24 /* NotificationViewController.swift in Sources */,
+				F10D51841FA7EE3E00BEC6A9 /* DataServices.swift in Sources */,
+				F143D98E1FAD0EFF009B5E69 /* Prayer Posts.swift in Sources */,
+				F10C75011FA4EA5C00A81A24 /* SignInViewController.swift in Sources */,
+				F10C75171FA51B5500A81A24 /* bindToKeyboard.swift in Sources */,
+				F143D9921FAE2F45009B5E69 /* Users.swift in Sources */,
+				F10D51801FA7928F00BEC6A9 /* AuthService.swift in Sources */,
+				F143D9901FAE0603009B5E69 /* PrayerStreamTableViewCell.swift in Sources */,
+				F10C75031FA4EA6D00A81A24 /* RegisterViewController.swift in Sources */,
+				F10C750C1FA4FBE400A81A24 /* DiscoverViewController.swift in Sources */,
+				F10C75151FA4FC5B00A81A24 /* ProfileViewController.swift in Sources */,
+				F10C74E61FA3EC8E00A81A24 /* AppDelegate.swift in Sources */,
+				F10C75091FA4FB8500A81A24 /* PrayerStreamViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F10C74F01FA3EC8E00A81A24 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F10C74F11FA3EC8E00A81A24 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F10C75181FA51FBA00A81A24 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F10C75191FA51FBA00A81A24 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F10C74F41FA3EC8E00A81A24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F10C74F51FA3EC8E00A81A24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F10C74F71FA3EC8E00A81A24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1869E51A6023B59BF280A84 /* Pods-The Pray Together App.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 93X3NYEN5T;
+				INFOPLIST_FILE = "The Pray Together App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jasonmundie.The-Pray-Together-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F10C74F81FA3EC8E00A81A24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D76E3812AED916AAC039BB78 /* Pods-The Pray Together App.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 93X3NYEN5T;
+				INFOPLIST_FILE = "The Pray Together App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jasonmundie.The-Pray-Together-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F10C74DD1FA3EC8E00A81A24 /* Build configuration list for PBXProject "The Pray Together App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F10C74F41FA3EC8E00A81A24 /* Debug */,
+				F10C74F51FA3EC8E00A81A24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F10C74F61FA3EC8E00A81A24 /* Build configuration list for PBXNativeTarget "The Pray Together App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F10C74F71FA3EC8E00A81A24 /* Debug */,
+				F10C74F81FA3EC8E00A81A24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F10C74DA1FA3EC8E00A81A24 /* Project object */;
+}

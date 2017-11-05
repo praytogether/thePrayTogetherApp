@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="zQp-qd-jDR">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hNP-h3-vPi" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3I7-MW-Dn8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.091001167889999998" green="0.23417572680000001" blue="0.2863805592" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.55087739229999999" green="0.61406648159999999" blue="0.69024974110000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ufo-Dm-k1C" kind="relationship" relationship="viewControllers" id="ls5-eu-yam"/>
+                        <segue destination="MIK-py-TrG" kind="relationship" relationship="viewControllers" id="liT-Kl-gUa"/>
+                        <segue destination="Cpq-H6-NTR" kind="relationship" relationship="viewControllers" id="bVF-t1-fzC"/>
+                        <segue destination="WTJ-Ke-DNW" kind="relationship" relationship="viewControllers" id="v0d-5g-ga7"/>
+                        <segue destination="JrE-ya-Yhs" kind="relationship" relationship="viewControllers" id="UAC-Lz-rw2"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZD-cN-nRh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="-1840"/>
+        </scene>
+        <!--NavigationPrayerStream-->
+        <scene sceneID="bKi-HV-ZpD">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="PrayerStream" storyboardName="Stream" referencedIdentifier="NavigationPrayerStream" id="ufo-Dm-k1C" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="YRz-5i-OHc"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="phI-Ps-CE3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-473" y="-976"/>
+        </scene>
+        <!--NavigationDiscover-->
+        <scene sceneID="frX-tk-mzQ">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Discover" storyboardName="Discover" referencedIdentifier="NavigationDiscover" id="MIK-py-TrG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="1DQ-un-s1I"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aOX-Y8-rNk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="274" y="-976"/>
+        </scene>
+        <!--NavigationPostPrayer-->
+        <scene sceneID="b2u-O0-bNu">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="PostPrayer" storyboardName="PostPrayer" referencedIdentifier="NavigationPostPrayer" id="Cpq-H6-NTR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="G8p-zS-wOr"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nML-Kw-o05" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="-976"/>
+        </scene>
+        <!--NavigationNotification-->
+        <scene sceneID="yKc-NE-Dph">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Notification" storyboardName="Notification" referencedIdentifier="NavigationNotification" id="WTJ-Ke-DNW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="ulI-sA-Aua"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8U2-Y1-3UI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1822" y="-976"/>
+        </scene>
+        <!--NavigationProfile-->
+        <scene sceneID="lyA-6O-a7X">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="NavigationProfile" id="JrE-ya-Yhs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="oxH-Jb-X1L"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UFi-6c-7TM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2588" y="-976"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.55087739229999999" green="0.61406648159999999" blue="0.69024974110000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+</document>

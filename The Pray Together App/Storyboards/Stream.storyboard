@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Futura.ttc">
+            <string>Futura-Bold</string>
+            <string>Futura-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Prayer Stream-->
+        <scene sceneID="ERt-Gy-6Sc">
+            <objects>
+                <viewController id="wQ1-cQ-yoh" customClass="PrayerStreamViewController" customModule="The_Pray_Together_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x6m-LE-YYk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gvi-6E-rue">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PrayerStreamCell" rowHeight="250" id="sJp-2A-HiE" customClass="PrayerStreamTableViewCell" customModule="The_Pray_Together_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="250"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sJp-2A-HiE" id="4iK-9h-I5g">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="Qme-VA-fHy">
+                                                    <rect key="frame" x="10" y="10" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="bfY-bD-PaD"/>
+                                                        <constraint firstAttribute="width" constant="40" id="s3M-GJ-wXm"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sc3-Mw-igq">
+                                                    <rect key="frame" x="60" y="78" width="93" height="23"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Prayer Content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJt-bf-q5J">
+                                                    <rect key="frame" x="60" y="111" width="305" height="26"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EfF-70-Qwl">
+                                                    <rect key="frame" x="342" y="152" width="23" height="23"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="23" id="brh-Qz-FD2"/>
+                                                        <constraint firstAttribute="width" constant="23" id="iXU-1j-dHR"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                    <state key="normal" image="person-with-folded-hands_1f64f"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1XQ-yg-Tqu">
+                                                    <rect key="frame" x="309" y="152" width="23" height="23"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="23" id="58e-ON-YJV"/>
+                                                        <constraint firstAttribute="width" constant="23" id="F0t-Ji-3QU"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                    <state key="normal" image="comment"/>
+                                                </button>
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cHs-t9-xIs">
+                                                    <rect key="frame" x="10" y="180" width="355" height="1"/>
+                                                    <color key="backgroundColor" red="0.76466729495731101" green="0.76466729495731101" blue="0.76466729495731101" alpha="0.25628745719178081" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="zBo-7P-Zdu"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Be the first to pray for this" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cA-Jz-6jh">
+                                                    <rect key="frame" x="10" y="191" width="141.5" height="16"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygi-wl-C7u">
+                                                    <rect key="frame" x="10" y="217" width="42" height="22.5"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0df-tU-hUr">
+                                                    <rect key="frame" x="276" y="152" width="23" height="23"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="23" id="P81-Gd-Ynb"/>
+                                                        <constraint firstAttribute="height" constant="23" id="dnF-H6-RCX"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                    <state key="normal" image="ribbon"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="EJt-bf-q5J" secondAttribute="trailing" constant="10" id="42V-Kd-yDV"/>
+                                                <constraint firstItem="EfF-70-Qwl" firstAttribute="leading" secondItem="1XQ-yg-Tqu" secondAttribute="trailing" constant="10" id="4hY-Ca-TEQ"/>
+                                                <constraint firstItem="EJt-bf-q5J" firstAttribute="leading" secondItem="Sc3-Mw-igq" secondAttribute="leading" id="6bV-X7-N93"/>
+                                                <constraint firstItem="ygi-wl-C7u" firstAttribute="leading" secondItem="4iK-9h-I5g" secondAttribute="leading" constant="10" id="7hK-YZ-Mcr"/>
+                                                <constraint firstItem="Qme-VA-fHy" firstAttribute="top" secondItem="4iK-9h-I5g" secondAttribute="top" constant="10" id="DdI-zz-E4X"/>
+                                                <constraint firstItem="6cA-Jz-6jh" firstAttribute="top" secondItem="cHs-t9-xIs" secondAttribute="bottom" constant="10" id="E2y-wE-S3l"/>
+                                                <constraint firstItem="cHs-t9-xIs" firstAttribute="leading" secondItem="4iK-9h-I5g" secondAttribute="leading" constant="10" id="Ere-c5-H2c"/>
+                                                <constraint firstItem="cHs-t9-xIs" firstAttribute="top" secondItem="EfF-70-Qwl" secondAttribute="bottom" constant="5" id="GAT-3E-jal"/>
+                                                <constraint firstItem="EfF-70-Qwl" firstAttribute="top" secondItem="EJt-bf-q5J" secondAttribute="bottom" constant="15" id="GmC-J8-Dm9"/>
+                                                <constraint firstAttribute="trailing" secondItem="EfF-70-Qwl" secondAttribute="trailing" constant="10" id="LQP-Uf-xdY"/>
+                                                <constraint firstItem="EJt-bf-q5J" firstAttribute="top" secondItem="Sc3-Mw-igq" secondAttribute="bottom" constant="10" id="Pgk-yD-XoZ"/>
+                                                <constraint firstItem="6cA-Jz-6jh" firstAttribute="leading" secondItem="4iK-9h-I5g" secondAttribute="leading" constant="10" id="XH3-F8-yhr"/>
+                                                <constraint firstItem="0df-tU-hUr" firstAttribute="top" secondItem="EJt-bf-q5J" secondAttribute="bottom" constant="15" id="YLL-du-WK0"/>
+                                                <constraint firstAttribute="trailing" secondItem="cHs-t9-xIs" secondAttribute="trailing" constant="10" id="YdP-wd-3Jx"/>
+                                                <constraint firstItem="Qme-VA-fHy" firstAttribute="leading" secondItem="4iK-9h-I5g" secondAttribute="leading" constant="10" id="ZuC-Uf-0aL"/>
+                                                <constraint firstItem="1XQ-yg-Tqu" firstAttribute="leading" secondItem="0df-tU-hUr" secondAttribute="trailing" constant="10" id="aiw-WN-YTM"/>
+                                                <constraint firstItem="1XQ-yg-Tqu" firstAttribute="top" secondItem="EJt-bf-q5J" secondAttribute="bottom" constant="15" id="bvz-S9-A6d"/>
+                                                <constraint firstItem="ygi-wl-C7u" firstAttribute="top" secondItem="6cA-Jz-6jh" secondAttribute="bottom" constant="10" id="e3q-XO-Cag"/>
+                                                <constraint firstItem="EfF-70-Qwl" firstAttribute="leading" secondItem="1XQ-yg-Tqu" secondAttribute="trailing" constant="10" id="h3e-8O-dRa"/>
+                                                <constraint firstItem="Sc3-Mw-igq" firstAttribute="top" secondItem="Qme-VA-fHy" secondAttribute="top" id="rK0-hB-gxf"/>
+                                                <constraint firstItem="Sc3-Mw-igq" firstAttribute="leading" secondItem="Qme-VA-fHy" secondAttribute="trailing" constant="10" id="seo-iC-ccb"/>
+                                                <constraint firstAttribute="bottom" secondItem="ygi-wl-C7u" secondAttribute="bottom" constant="10" id="tpw-iB-iVC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bookmarkButton" destination="0df-tU-hUr" id="eFF-hR-Fbz"/>
+                                            <outlet property="commentButton" destination="1XQ-yg-Tqu" id="sCe-71-rzt"/>
+                                            <outlet property="commentLabel" destination="ygi-wl-C7u" id="7jV-Xz-DmC"/>
+                                            <outlet property="prayedForButton" destination="EfF-70-Qwl" id="xan-lg-DOa"/>
+                                            <outlet property="prayerContentLabel" destination="EJt-bf-q5J" id="fgR-3H-kCS"/>
+                                            <outlet property="prayerCountLabel" destination="6cA-Jz-6jh" id="jKQ-rO-3Ox"/>
+                                            <outlet property="profileImage" destination="Qme-VA-fHy" id="pyi-6R-Oom"/>
+                                            <outlet property="usernameLabel" destination="Sc3-Mw-igq" id="4u7-T1-a56"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ySj-Xg-K4M">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lWK-BX-9vZ" firstAttribute="bottom" secondItem="Gvi-6E-rue" secondAttribute="bottom" id="3Hx-DU-B2T"/>
+                            <constraint firstItem="lWK-BX-9vZ" firstAttribute="trailing" secondItem="Gvi-6E-rue" secondAttribute="trailing" id="NA8-r4-qQn"/>
+                            <constraint firstItem="Gvi-6E-rue" firstAttribute="top" secondItem="lWK-BX-9vZ" secondAttribute="top" id="pXh-Y2-GmG"/>
+                            <constraint firstItem="Gvi-6E-rue" firstAttribute="leading" secondItem="lWK-BX-9vZ" secondAttribute="leading" id="yTB-Qx-HNa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lWK-BX-9vZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Prayer Stream" id="qwG-LY-DEx">
+                        <barButtonItem key="leftBarButtonItem" title="LogOut" id="pnu-Ch-zSC">
+                            <connections>
+                                <action selector="logoutButtonTapped:" destination="wQ1-cQ-yoh" id="Zbb-28-mwq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="ySj-Xg-K4M" id="ZEc-tn-jvx"/>
+                        <outlet property="prayerStreamTableView" destination="Gvi-6E-rue" id="R8t-Za-iTb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v2S-1R-jdl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-474.39999999999998" y="-254.12293853073464"/>
+        </scene>
+        <!--Stream-->
+        <scene sceneID="XeH-yc-x0g">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationPrayerStream" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="egL-ej-Jhi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Stream" image="feed-tabIcon" id="xYs-EK-VfQ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="56c-46-wEO">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.091001167889999998" green="0.23417572680000001" blue="0.2863805592" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wQ1-cQ-yoh" kind="relationship" relationship="rootViewController" id="eMZ-d7-tTX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OuN-AN-bxv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-473" y="-976"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="comment" width="22" height="19"/>
+        <image name="defaultProfileImage" width="102" height="102"/>
+        <image name="feed-tabIcon" width="25" height="21"/>
+        <image name="person-with-folded-hands_1f64f" width="120" height="120"/>
+        <image name="ribbon" width="18" height="26"/>
+    </resources>
+    <color key="tintColor" red="0.55087739229999999" green="0.61406648159999999" blue="0.69024974110000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+</document>

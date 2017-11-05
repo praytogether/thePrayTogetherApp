@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hNP-h3-vPi">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Prayer-->
+        <scene sceneID="mtP-be-nur">
+            <objects>
+                <viewController id="aP4-nU-rjb" customClass="PostPrayerViewController" customModule="The_Pray_Together_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="26d-If-fNw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="uG0-9l-JUm"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Prayer" id="dla-tv-TpA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uew-Db-CBZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="-254"/>
+        </scene>
+        <!--Notifications-->
+        <scene sceneID="Uh7-eK-7fD">
+            <objects>
+                <viewController id="iWX-Ej-t0h" customClass="NotificationViewController" customModule="The_Pray_Together_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CeT-2m-07a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="MJD-K1-E0F"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Notifications" id="NQt-l6-y64"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0YP-67-iOA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1822" y="-254"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="GWT-DX-KmM">
+            <objects>
+                <viewController id="diU-Vb-pVZ" customClass="ProfileViewController" customModule="The_Pray_Together_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7x8-Xp-I7V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="qjg-1H-xG4"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="T2m-3d-bwh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RO6-rh-1BK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2588" y="-254"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="zQp-qd-jDR">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hNP-h3-vPi" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3I7-MW-Dn8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.091001167889999998" green="0.23417572680000001" blue="0.2863805592" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.55087739229999999" green="0.61406648159999999" blue="0.69024974110000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ufo-Dm-k1C" kind="relationship" relationship="viewControllers" id="ls5-eu-yam"/>
+                        <segue destination="MIK-py-TrG" kind="relationship" relationship="viewControllers" id="liT-Kl-gUa"/>
+                        <segue destination="mxT-4g-L9g" kind="relationship" relationship="viewControllers" id="bVF-t1-fzC"/>
+                        <segue destination="en1-Fd-Cws" kind="relationship" relationship="viewControllers" id="v0d-5g-ga7"/>
+                        <segue destination="YvT-yO-YG3" kind="relationship" relationship="viewControllers" id="UAC-Lz-rw2"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZD-cN-nRh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="-1840"/>
+        </scene>
+        <!--New Prayer-->
+        <scene sceneID="Z3v-ds-xKF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mxT-4g-L9g" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="New Prayer" image="compose" id="Ofy-zJ-qZe"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aSh-Zg-Wog">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.091001167889999998" green="0.23417572680000001" blue="0.2863805592" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aP4-nU-rjb" kind="relationship" relationship="rootViewController" id="w8K-BU-5vC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Di7-HW-rzh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="-976"/>
+        </scene>
+        <!--Notifications-->
+        <scene sceneID="kFU-cj-Yob">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="en1-Fd-Cws" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Notifications" image="notification" id="K13-e9-NgB"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IRe-no-7tv">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.091001167889999998" green="0.23417572680000001" blue="0.2863805592" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iWX-Ej-t0h" kind="relationship" relationship="rootViewController" id="sK3-dd-IfS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3eV-LH-ldw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1822" y="-976"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="uaC-Bb-dY7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YvT-yO-YG3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="me-tabIcon" id="eRb-Yv-Iwu"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Olu-rn-6tS">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.091001167889999998" green="0.23417572680000001" blue="0.2863805592" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="diU-Vb-pVZ" kind="relationship" relationship="rootViewController" id="dVE-5X-dyT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cQj-md-tnw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2588" y="-976"/>
+        </scene>
+        <!--NavigationPrayerStream-->
+        <scene sceneID="bKi-HV-ZpD">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="PrayerStream" storyboardName="Stream" referencedIdentifier="NavigationPrayerStream" id="ufo-Dm-k1C" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="YRz-5i-OHc"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="phI-Ps-CE3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-473" y="-976"/>
+        </scene>
+        <!--NavigationDiscover-->
+        <scene sceneID="frX-tk-mzQ">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Discover" storyboardName="Discover" referencedIdentifier="NavigationDiscover" id="MIK-py-TrG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="1DQ-un-s1I"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aOX-Y8-rNk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="274" y="-976"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="compose" width="21" height="24"/>
+        <image name="me-tabIcon" width="25" height="25"/>
+        <image name="notification" width="15" height="18"/>
+    </resources>
+    <color key="tintColor" red="0.55087739229999999" green="0.61406648159999999" blue="0.69024974110000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+</document>
