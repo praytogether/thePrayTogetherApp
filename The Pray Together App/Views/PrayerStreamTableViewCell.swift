@@ -21,6 +21,8 @@ class PrayerStreamTableViewCell: UITableViewCell {
     @IBOutlet weak var prayerCountLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
     
+    var streamVC: PrayerStreamViewController?
+    
     var prayerPosts: PrayerPosts? {
         didSet {
             updateView()
@@ -37,8 +39,6 @@ class PrayerStreamTableViewCell: UITableViewCell {
     func updateView() {
         
         prayerContentLabel.text = prayerPosts?.prayer
-   
-        setUserInfo()
      }
     
     func setUserInfo() {
@@ -52,9 +52,23 @@ class PrayerStreamTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        
-        
-        
+        usernameLabel.text = ""
+ 
+    }
+    
+    @IBAction func commentButtonTapped(_ sender: Any) {
+        commentButtonPressed()
+    }
+    
+    func commentButtonPressed() {
+        if let id = prayerPosts?.id {
+            streamVC?.performSegue(withIdentifier: "streamToCommentSegue", sender: id)
+        }
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        profileImage.image = UIImage(named: "defaultProfileImage")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

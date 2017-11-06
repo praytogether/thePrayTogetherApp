@@ -30,6 +30,7 @@
 		F10C75241FA5811B00A81A24 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F10C75231FA5811B00A81A24 /* Profile.storyboard */; };
 		F10CDA871FB0AEA70087736E /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CDA861FB0AEA70087736E /* CommentsTableViewCell.swift */; };
 		F10CDA891FB0B0160087736E /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CDA881FB0B0160087736E /* CommentViewController.swift */; };
+		F10CDA8B1FB0EDDB0087736E /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CDA8A1FB0EDDB0087736E /* Comments.swift */; };
 		F10D51801FA7928F00BEC6A9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D517F1FA7928F00BEC6A9 /* AuthService.swift */; };
 		F10D51841FA7EE3E00BEC6A9 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D51831FA7EE3E00BEC6A9 /* DataServices.swift */; };
 		F143D98E1FAD0EFF009B5E69 /* Prayer Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F143D98D1FAD0EFF009B5E69 /* Prayer Posts.swift */; };
@@ -65,6 +66,7 @@
 		F10C75231FA5811B00A81A24 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		F10CDA861FB0AEA70087736E /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
 		F10CDA881FB0B0160087736E /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		F10CDA8A1FB0EDDB0087736E /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
 		F10D517F1FA7928F00BEC6A9 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F10D51831FA7EE3E00BEC6A9 /* DataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
 		F143D98D1FAD0EFF009B5E69 /* Prayer Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Prayer Posts.swift"; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 			children = (
 				F143D98D1FAD0EFF009B5E69 /* Prayer Posts.swift */,
 				F143D9911FAE2F45009B5E69 /* Users.swift */,
+				F10CDA8A1FB0EDDB0087736E /* Comments.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				F143D9921FAE2F45009B5E69 /* Users.swift in Sources */,
 				F10D51801FA7928F00BEC6A9 /* AuthService.swift in Sources */,
 				F143D9901FAE0603009B5E69 /* PrayerStreamTableViewCell.swift in Sources */,
+				F10CDA8B1FB0EDDB0087736E /* Comments.swift in Sources */,
 				F10CDA871FB0AEA70087736E /* CommentsTableViewCell.swift in Sources */,
 				F10C75031FA4EA6D00A81A24 /* RegisterViewController.swift in Sources */,
 				F10C750C1FA4FBE400A81A24 /* DiscoverViewController.swift in Sources */,

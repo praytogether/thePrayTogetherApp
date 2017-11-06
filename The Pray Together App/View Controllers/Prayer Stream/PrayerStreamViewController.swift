@@ -16,6 +16,7 @@ class PrayerStreamViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var prayerPosts = [PrayerPosts]()
     var users = [User]()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,21 +25,15 @@ class PrayerStreamViewController: UIViewController {
         prayerStreamTableView.dataSource = self
         loadPrayers()
         
-//        var prayerPosts = PrayerPosts(prayerText: "Test")
+
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.tabBarController?.tabBar.isHidden = false
-    }
-    
-    
+
     
     func loadPrayers() {
-        activityIndicator.stopAnimating()
+        activityIndicator.startAnimating()
         Database.database().reference().child("Prayer Posts").observe(.childAdded) { (snapshot) in
             if let dict = snapshot.value as? [String: Any] {
-                let newPrayer = PrayerPosts.transformPrayer(dict: dict)
+                let newPrayer = PrayerPosts.transformPrayer(dict: dict, key: snapshot.key)
                 self.fetchUser(uid: newPrayer.sender!, completed: {
                 self.prayerPosts.append(newPrayer)
                     self.activityIndicator.stopAnimating()
@@ -59,9 +54,9 @@ class PrayerStreamViewController: UIViewController {
             }
         })
     }
-    @IBAction func commentButtonTapped(_ sender: Any) {
-        performSegue(withIdentifier: "streamToCommentSegue", sender: nil)
-    }
+  
+    
+  
     
     @IBAction func logoutButtonTapped(_ sender: Any) {
         do {
@@ -74,7 +69,17 @@ class PrayerStreamViewController: UIViewController {
         self.present(signInVC, animated: true, completion: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "streamToCommentSegue" {
+            let commentVC = segue.destination as! CommentViewController
+            let postId = sender as! String
+            commentVC.postId = postId
+        }
+    }
+    
 }
+
+
 
 extension PrayerStreamViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -87,6 +92,7 @@ extension PrayerStreamViewController: UITableViewDataSource {
         let user = users[indexPath.row]
         cell.prayerPosts = prayerPost
         cell.users = user
+        cell.streamVC = self
         return cell
     }
     

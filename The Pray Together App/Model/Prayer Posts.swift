@@ -13,14 +13,16 @@ class PrayerPosts {
     var username: String?
     var creationDate: Double?
     var sender: String?
+    var id: String?
     
 }
 
 extension PrayerPosts {
-    static func transformPrayer(dict: [String: Any]) -> PrayerPosts {
+    static func transformPrayer(dict: [String: Any], key: String) -> PrayerPosts {
     
     let prayerPosts = PrayerPosts()
     
+    prayerPosts.id = key
     prayerPosts.prayer = dict["prayer"] as? String
     prayerPosts.username = dict["username"] as? String
     prayerPosts.creationDate = dict["creationDate"] as? Double

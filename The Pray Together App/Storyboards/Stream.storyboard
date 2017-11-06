@@ -15,7 +15,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Prayer Stream-->
+        <!--PrayerStream-->
         <scene sceneID="ERt-Gy-6Sc">
             <objects>
                 <viewController id="wQ1-cQ-yoh" customClass="PrayerStreamViewController" customModule="The_Pray_Together_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -76,7 +76,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                                     <state key="normal" image="comment"/>
                                                     <connections>
-                                                        <action selector="commentButtonTapped:" destination="wQ1-cQ-yoh" eventType="touchUpInside" id="rPU-r9-Pyz"/>
+                                                        <action selector="commentButtonTapped:" destination="sJp-2A-HiE" eventType="touchUpInside" id="PAi-Yi-lhx"/>
                                                     </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cHs-t9-xIs">
@@ -160,7 +160,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lWK-BX-9vZ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Prayer Stream" id="qwG-LY-DEx">
+                    <navigationItem key="navigationItem" title="PrayerStream" id="qwG-LY-DEx">
                         <barButtonItem key="leftBarButtonItem" title="LogOut" id="pnu-Ch-zSC">
                             <connections>
                                 <action selector="logoutButtonTapped:" destination="wQ1-cQ-yoh" id="Zbb-28-mwq"/>
@@ -189,7 +189,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="553"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="commentCell" rowHeight="82" id="cow-Po-MZb" customClass="CommentsTableViewCell" customModule="The_Pray_Together_App" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CommentCell" rowHeight="82" id="cow-Po-MZb" customClass="CommentsTableViewCell" customModule="The_Pray_Together_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="82"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cow-Po-MZb" id="LmB-3H-h5u">
@@ -291,6 +291,7 @@
                         <viewLayoutGuide key="safeArea" id="nq4-rK-S8h"/>
                     </view>
                     <connections>
+                        <outlet property="commentTableView" destination="xRq-WP-F6h" id="O9u-To-oBG"/>
                         <outlet property="commentTextField" destination="tWm-8b-WFS" id="Tuy-4j-qZ8"/>
                         <outlet property="commentViewContainer" destination="1t5-qa-BfH" id="xJc-R2-Xqf"/>
                         <outlet property="sendButton" destination="yxI-Zf-N1A" id="xjk-kK-VCU"/>

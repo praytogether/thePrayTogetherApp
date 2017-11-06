@@ -14,17 +14,60 @@ class CommentViewController: UIViewController {
     @IBOutlet weak var commentViewContainer: UIView!
     @IBOutlet weak var commentTextField: UITextField!
     @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var commentTableView: UITableView!
+    
+    var postId: String!
+    var comments = [Comments]()
+    var users = [User]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-commentViewContainer.bindToKeyboard()
-      sendButton.isEnabled = false
+        title = "Comment"
+        commentTextField.bindToKeyboard()
+        sendButton.bindToKeyboard()
+        hideKeyboardWhenTappedAround()
+        sendButton.isEnabled = false
         handleTextField()
+        loadComments()
+        commentTableView.dataSource = self
+        commentTableView.estimatedRowHeight = 80
+        commentTableView.rowHeight = UITableViewAutomaticDimension
+    }
+    
+    func loadComments() {
+        let postCommentRef = Database.database().reference().child("Post-Comments").child(self.postId)
+        postCommentRef.observe(.childAdded) { snapshot in
+            Database.database().reference().child("Comments").child(snapshot.key).observeSingleEvent(of: .value, with: { (snapshotComment) in
+                if let dict = snapshotComment.value as? [String: Any] {
+                    let newComment = Comments.transformComment(dict: dict)
+                    self.fetchUser(uid: newComment.uid!, completed: {
+                        self.comments.append(newComment)
+                        self.commentTableView.reloadData()
+                    })
+                }
+            })
+        }
+    }
+    
+    func fetchUser(uid: String, completed: @escaping () -> Void ) {
+        Database.database().reference().child("Users").child(uid).observeSingleEvent(of: .value, with: {
+            snapshot in
+            if let dict = snapshot.value as? [String: Any] {
+                let user = User.transformUser(dict: dict)
+                self.users.append(user)
+                completed()
+            }
+        })
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     func handleTextField() {
@@ -53,6 +96,14 @@ commentViewContainer.bindToKeyboard()
             if error != nil {
                 return
             }
+            
+            let postCommentRef = Database.database().reference().child("Post-Comments").child(self.postId).child(newCommentId)
+            postCommentRef.setValue(true, withCompletionBlock: { (error, ref) in
+                if error != nil {
+                    print("failed to post comment \(error)")
+                    return
+                }
+            })
             self.empty()
         }
     }
@@ -62,5 +113,20 @@ commentViewContainer.bindToKeyboard()
         self.sendButton.isEnabled = false
         sendButton.setTitleColor(UIColor.lightGray, for: .normal)
     }
-    
+}
+
+
+extension CommentViewController: UITableViewDataSource {
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return comments.count
+        }
+        
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = commentTableView.dequeueReusableCell(withIdentifier: "CommentCell", for: indexPath) as! CommentsTableViewCell
+            let comment = comments[indexPath.row]
+            let user = users[indexPath.row]
+            cell.comment = comment
+            cell.users = user
+            return cell
+        }
 }
