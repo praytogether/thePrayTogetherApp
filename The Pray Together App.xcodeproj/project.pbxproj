@@ -28,6 +28,8 @@
 		F10C75201FA57F4E00A81A24 /* PostPrayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F10C751F1FA57F4E00A81A24 /* PostPrayer.storyboard */; };
 		F10C75221FA57FA200A81A24 /* Notification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F10C75211FA57FA100A81A24 /* Notification.storyboard */; };
 		F10C75241FA5811B00A81A24 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F10C75231FA5811B00A81A24 /* Profile.storyboard */; };
+		F10CDA871FB0AEA70087736E /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CDA861FB0AEA70087736E /* CommentsTableViewCell.swift */; };
+		F10CDA891FB0B0160087736E /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CDA881FB0B0160087736E /* CommentViewController.swift */; };
 		F10D51801FA7928F00BEC6A9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D517F1FA7928F00BEC6A9 /* AuthService.swift */; };
 		F10D51841FA7EE3E00BEC6A9 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D51831FA7EE3E00BEC6A9 /* DataServices.swift */; };
 		F143D98E1FAD0EFF009B5E69 /* Prayer Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F143D98D1FAD0EFF009B5E69 /* Prayer Posts.swift */; };
@@ -61,6 +63,8 @@
 		F10C751F1FA57F4E00A81A24 /* PostPrayer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PostPrayer.storyboard; sourceTree = "<group>"; };
 		F10C75211FA57FA100A81A24 /* Notification.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notification.storyboard; sourceTree = "<group>"; };
 		F10C75231FA5811B00A81A24 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		F10CDA861FB0AEA70087736E /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
+		F10CDA881FB0B0160087736E /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		F10D517F1FA7928F00BEC6A9 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F10D51831FA7EE3E00BEC6A9 /* DataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
 		F143D98D1FAD0EFF009B5E69 /* Prayer Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Prayer Posts.swift"; sourceTree = "<group>"; };
@@ -182,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				F10C75081FA4FB8500A81A24 /* PrayerStreamViewController.swift */,
+				F10CDA881FB0B0160087736E /* CommentViewController.swift */,
 			);
 			path = "Prayer Stream";
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				F143D98F1FAE0603009B5E69 /* PrayerStreamTableViewCell.swift */,
+				F10CDA861FB0AEA70087736E /* CommentsTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -403,11 +409,13 @@
 				F10C75111FA4FC2C00A81A24 /* NotificationViewController.swift in Sources */,
 				F10D51841FA7EE3E00BEC6A9 /* DataServices.swift in Sources */,
 				F143D98E1FAD0EFF009B5E69 /* Prayer Posts.swift in Sources */,
+				F10CDA891FB0B0160087736E /* CommentViewController.swift in Sources */,
 				F10C75011FA4EA5C00A81A24 /* SignInViewController.swift in Sources */,
 				F10C75171FA51B5500A81A24 /* bindToKeyboard.swift in Sources */,
 				F143D9921FAE2F45009B5E69 /* Users.swift in Sources */,
 				F10D51801FA7928F00BEC6A9 /* AuthService.swift in Sources */,
 				F143D9901FAE0603009B5E69 /* PrayerStreamTableViewCell.swift in Sources */,
+				F10CDA871FB0AEA70087736E /* CommentsTableViewCell.swift in Sources */,
 				F10C75031FA4EA6D00A81A24 /* RegisterViewController.swift in Sources */,
 				F10C750C1FA4FBE400A81A24 /* DiscoverViewController.swift in Sources */,
 				F10C75151FA4FC5B00A81A24 /* ProfileViewController.swift in Sources */,

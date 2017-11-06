@@ -27,6 +27,11 @@ class PrayerStreamViewController: UIViewController {
 //        var prayerPosts = PrayerPosts(prayerText: "Test")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
     
     
     func loadPrayers() {
@@ -54,7 +59,10 @@ class PrayerStreamViewController: UIViewController {
             }
         })
     }
-
+    @IBAction func commentButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "streamToCommentSegue", sender: nil)
+    }
+    
     @IBAction func logoutButtonTapped(_ sender: Any) {
         do {
             try Auth.auth().signOut()
