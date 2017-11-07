@@ -42,7 +42,7 @@ class DataService {
     
     func createDBUser(uid: String, userData: Dictionary<String, Any>) {
         REF_USERS.child(uid).updateChildValues(userData)
-}
+    }
     
     func uploadPost(withMessage message: String, forUID uid: String, withUsername username: String, withGroupKey groupKey: String?, withCreationDate creationDate: Double, sendComplete: @escaping (_ status: Bool) -> ()) {
         guard let userUid = Auth.auth().currentUser?.uid else { return }
@@ -54,8 +54,8 @@ class DataService {
             REF_STREAM.childByAutoId().updateChildValues(["prayer": message, "sender": uid, "username": username, "creationDate": Date().timeIntervalSince1970])
             sendComplete(true)
             
-//            REF_STREAM.child(userUid).childByAutoId().updateChildValues(["prayer": message, "sender": uid, "username": username, "creationDate": Date().timeIntervalSince1970])
-//            sendComplete(true)
+            //            REF_STREAM.child(userUid).childByAutoId().updateChildValues(["prayer": message, "sender": uid, "username": username, "creationDate": Date().timeIntervalSince1970])
+            //            sendComplete(true)
         }
     }
     

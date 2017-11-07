@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 class AuthService {
-
+    
     static let instance = AuthService()
     
     func registerUser(withEmail email: String, andPassword password: String, andUsername username: String, andBio bio: String, andFullName fullName: String, andProfileImage profileImage: String, userCreationComplete: @escaping (_ status: Bool, _ error: Error?) -> ()) {

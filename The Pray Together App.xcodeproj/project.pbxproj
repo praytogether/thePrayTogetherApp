@@ -31,6 +31,11 @@
 		F10CDA871FB0AEA70087736E /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CDA861FB0AEA70087736E /* CommentsTableViewCell.swift */; };
 		F10CDA891FB0B0160087736E /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CDA881FB0B0160087736E /* CommentViewController.swift */; };
 		F10CDA8B1FB0EDDB0087736E /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CDA8A1FB0EDDB0087736E /* Comments.swift */; };
+		F10CDA901FB118890087736E /* PrayerPostApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CDA8F1FB118890087736E /* PrayerPostApi.swift */; };
+		F10CDA921FB13C860087736E /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CDA911FB13C860087736E /* UserApi.swift */; };
+		F10CDA941FB15B400087736E /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CDA931FB15B400087736E /* Api.swift */; };
+		F10CDA961FB15C1B0087736E /* CommentApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CDA951FB15C1B0087736E /* CommentApi.swift */; };
+		F10CDA981FB160C70087736E /* Post_CommentsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CDA971FB160C70087736E /* Post_CommentsApi.swift */; };
 		F10D51801FA7928F00BEC6A9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D517F1FA7928F00BEC6A9 /* AuthService.swift */; };
 		F10D51841FA7EE3E00BEC6A9 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D51831FA7EE3E00BEC6A9 /* DataServices.swift */; };
 		F143D98E1FAD0EFF009B5E69 /* Prayer Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F143D98D1FAD0EFF009B5E69 /* Prayer Posts.swift */; };
@@ -67,6 +72,11 @@
 		F10CDA861FB0AEA70087736E /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
 		F10CDA881FB0B0160087736E /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		F10CDA8A1FB0EDDB0087736E /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
+		F10CDA8F1FB118890087736E /* PrayerPostApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerPostApi.swift; sourceTree = "<group>"; };
+		F10CDA911FB13C860087736E /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
+		F10CDA931FB15B400087736E /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		F10CDA951FB15C1B0087736E /* CommentApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentApi.swift; sourceTree = "<group>"; };
+		F10CDA971FB160C70087736E /* Post_CommentsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post_CommentsApi.swift; sourceTree = "<group>"; };
 		F10D517F1FA7928F00BEC6A9 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F10D51831FA7EE3E00BEC6A9 /* DataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
 		F143D98D1FAD0EFF009B5E69 /* Prayer Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Prayer Posts.swift"; sourceTree = "<group>"; };
@@ -124,6 +134,7 @@
 		F10C74E41FA3EC8E00A81A24 /* The Pray Together App */ = {
 			isa = PBXGroup;
 			children = (
+				F10CDA8C1FB117E10087736E /* APIs */,
 				F143D98C1FAD0EEB009B5E69 /* Model */,
 				F143D98B1FAA3D91009B5E69 /* Views */,
 				F10D517E1FA7925200BEC6A9 /* Services */,
@@ -223,6 +234,18 @@
 				F10C75141FA4FC5B00A81A24 /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		F10CDA8C1FB117E10087736E /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				F10CDA8F1FB118890087736E /* PrayerPostApi.swift */,
+				F10CDA911FB13C860087736E /* UserApi.swift */,
+				F10CDA931FB15B400087736E /* Api.swift */,
+				F10CDA951FB15C1B0087736E /* CommentApi.swift */,
+				F10CDA971FB160C70087736E /* Post_CommentsApi.swift */,
+			);
+			path = APIs;
 			sourceTree = "<group>";
 		};
 		F10D517E1FA7925200BEC6A9 /* Services */ = {
@@ -408,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F10C75061FA4F02000A81A24 /* hideKeyboardWhenTapped.swift in Sources */,
+				F10CDA921FB13C860087736E /* UserApi.swift in Sources */,
 				F10C750F1FA4FC0F00A81A24 /* PostPrayerViewController.swift in Sources */,
 				F10C75111FA4FC2C00A81A24 /* NotificationViewController.swift in Sources */,
 				F10D51841FA7EE3E00BEC6A9 /* DataServices.swift in Sources */,
@@ -416,14 +440,18 @@
 				F10C75011FA4EA5C00A81A24 /* SignInViewController.swift in Sources */,
 				F10C75171FA51B5500A81A24 /* bindToKeyboard.swift in Sources */,
 				F143D9921FAE2F45009B5E69 /* Users.swift in Sources */,
+				F10CDA961FB15C1B0087736E /* CommentApi.swift in Sources */,
 				F10D51801FA7928F00BEC6A9 /* AuthService.swift in Sources */,
 				F143D9901FAE0603009B5E69 /* PrayerStreamTableViewCell.swift in Sources */,
+				F10CDA941FB15B400087736E /* Api.swift in Sources */,
 				F10CDA8B1FB0EDDB0087736E /* Comments.swift in Sources */,
+				F10CDA981FB160C70087736E /* Post_CommentsApi.swift in Sources */,
 				F10CDA871FB0AEA70087736E /* CommentsTableViewCell.swift in Sources */,
 				F10C75031FA4EA6D00A81A24 /* RegisterViewController.swift in Sources */,
 				F10C750C1FA4FBE400A81A24 /* DiscoverViewController.swift in Sources */,
 				F10C75151FA4FC5B00A81A24 /* ProfileViewController.swift in Sources */,
 				F10C74E61FA3EC8E00A81A24 /* AppDelegate.swift in Sources */,
+				F10CDA901FB118890087736E /* PrayerPostApi.swift in Sources */,
 				F10C75091FA4FB8500A81A24 /* PrayerStreamViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

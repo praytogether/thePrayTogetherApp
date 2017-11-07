@@ -19,15 +19,15 @@ class PrayerPosts {
 
 extension PrayerPosts {
     static func transformPrayer(dict: [String: Any], key: String) -> PrayerPosts {
+        
+        let prayerPosts = PrayerPosts()
+        
+        prayerPosts.id = key
+        prayerPosts.prayer = dict["prayer"] as? String
+        prayerPosts.username = dict["username"] as? String
+        prayerPosts.creationDate = dict["creationDate"] as? Double
+        prayerPosts.sender = dict["sender"] as? String
+        return prayerPosts
+    }
     
-    let prayerPosts = PrayerPosts()
-    
-    prayerPosts.id = key
-    prayerPosts.prayer = dict["prayer"] as? String
-    prayerPosts.username = dict["username"] as? String
-    prayerPosts.creationDate = dict["creationDate"] as? Double
-    prayerPosts.sender = dict["sender"] as? String
-    return prayerPosts
-}
-
 }

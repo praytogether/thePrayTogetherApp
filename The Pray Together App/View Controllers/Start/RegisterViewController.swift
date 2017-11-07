@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 class RegisterViewController: UIViewController {
-
+    
     //    OUTLETS
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var fullNameTextField: UITextField!
@@ -112,11 +112,11 @@ class RegisterViewController: UIViewController {
             guard let uid = Auth.auth().currentUser?.uid else { return }
             
             Database.database().reference().child("users").child(uid).updateChildValues(["profileImage" : profileImageUrl])
-        
-        
+            
+            
         }
     }
-
+    
     @IBAction func backButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -144,5 +144,5 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
         
         
         
-}
+    }
 }

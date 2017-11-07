@@ -11,18 +11,18 @@ import Firebase
 
 class SignInViewController: UIViewController {
     
-//    OUTLETS
+    //    OUTLETS
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButtonLabel: UILabel!
     @IBOutlet weak var signInButton: UIButton!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         handleTextField()
-       
+        
         hideKeyboardWhenTappedAround()
         signInButtonLabel.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         signInButton.isEnabled = false
@@ -36,7 +36,7 @@ class SignInViewController: UIViewController {
         }
         
     }
-
+    
     func handleTextField() {
         
         emailTextField.addTarget(self, action: #selector(RegisterViewController.textFieldDidChange), for: UIControlEvents.editingChanged)
@@ -56,7 +56,7 @@ class SignInViewController: UIViewController {
     @IBAction func signInButtonTapped(_ sender: Any) {
         AuthService.instance.loginUser(withEmail: emailTextField.text!, andPassword: passwordTextField.text!, loginComplete: { (success, loginError) in
             if success {
-               
+                
                 self.signInButtonLabel.text = "SUCCESS"
                 self.performSegue(withIdentifier: "SignInToTabBarId", sender: self)
             } else {
@@ -65,7 +65,7 @@ class SignInViewController: UIViewController {
                 print(String(describing: loginError?.localizedDescription))
                 
             }
-    
+            
         }
-    )}
+        )}
 }

@@ -11,7 +11,7 @@ import Firebase
 import SDWebImage
 
 class PrayerStreamTableViewCell: UITableViewCell {
-//    Outlets
+    //    Outlets
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var prayerContentLabel: UILabel!
@@ -39,21 +39,21 @@ class PrayerStreamTableViewCell: UITableViewCell {
     func updateView() {
         
         prayerContentLabel.text = prayerPosts?.prayer
-     }
+    }
     
     func setUserInfo() {
-       usernameLabel.text = users?.username
+        usernameLabel.text = users?.username
         if let photoUrlString = users?.profileImage {
-        let photoUrl = URL(string: photoUrlString)
-        profileImage.sd_setImage(with: photoUrl, placeholderImage: UIImage(named:"defaultProfileImage"))
-    
-    }
+            let photoUrl = URL(string: photoUrlString)
+            profileImage.sd_setImage(with: photoUrl, placeholderImage: UIImage(named:"defaultProfileImage"))
+            
+        }
     }
     override func awakeFromNib() {
         super.awakeFromNib()
         
         usernameLabel.text = ""
- 
+        
     }
     
     @IBAction func commentButtonTapped(_ sender: Any) {
@@ -70,11 +70,11 @@ class PrayerStreamTableViewCell: UITableViewCell {
         super.prepareForReuse()
         profileImage.image = UIImage(named: "defaultProfileImage")
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
 }

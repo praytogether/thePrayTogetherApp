@@ -10,8 +10,8 @@ import UIKit
 import Firebase
 
 class PostPrayerViewController: UIViewController {
-
-//    OUTLETS
+    
+    //    OUTLETS
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var prayerTextView: UITextView!
     @IBOutlet weak var groupsTextField: UITextField!
@@ -40,7 +40,7 @@ class PostPrayerViewController: UIViewController {
             guard let dictionary = snapshot.value as? [String : Any] else { return }
             
             guard let username = dictionary["username"] as? String else { return }
-       
+            
             if self.prayerTextView.text != nil && self.prayerTextView.text != "Post prayer here..." {
                 self.postPrayerButton.isEnabled = false
                 

@@ -11,8 +11,8 @@ import Firebase
 import SDWebImage
 
 class CommentsTableViewCell: UITableViewCell {
-
-//    OUTLETS
+    
+    //    OUTLETS
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
@@ -26,7 +26,7 @@ class CommentsTableViewCell: UITableViewCell {
     
     var users: User? {
         didSet {
-           setUserInfo()
+            setUserInfo()
         }
     }
     
@@ -55,11 +55,11 @@ class CommentsTableViewCell: UITableViewCell {
         profileImage.image = UIImage(named: "defaultProfileImage")
     }
     
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
 }

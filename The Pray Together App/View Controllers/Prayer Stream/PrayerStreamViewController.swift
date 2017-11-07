@@ -11,13 +11,13 @@ import Firebase
 
 class PrayerStreamViewController: UIViewController {
     
-//    OUTLETS
+    //    OUTLETS
     @IBOutlet weak var prayerStreamTableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var prayerPosts = [PrayerPosts]()
     var users = [User]()
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         prayerStreamTableView.estimatedRowHeight = 250
@@ -25,38 +25,31 @@ class PrayerStreamViewController: UIViewController {
         prayerStreamTableView.dataSource = self
         loadPrayers()
         
-
+        
     }
-
+    
     
     func loadPrayers() {
         activityIndicator.startAnimating()
-        Database.database().reference().child("Prayer Posts").observe(.childAdded) { (snapshot) in
-            if let dict = snapshot.value as? [String: Any] {
-                let newPrayer = PrayerPosts.transformPrayer(dict: dict, key: snapshot.key)
-                self.fetchUser(uid: newPrayer.sender!, completed: {
-                self.prayerPosts.append(newPrayer)
-                    self.activityIndicator.stopAnimating()
+        Api.PrayerPost.observePrayers { (prayerPost) in
+            self.fetchUser(uid: prayerPost.sender!, completed: {
+                self.prayerPosts.append(prayerPost)
+                self.activityIndicator.stopAnimating()
                 self.prayerStreamTableView.reloadData()
-                print(dict)
             })
-            }
         }
+        
     }
     
-    func fetchUser(uid: String, completed: @escaping () -> Void ) {
-        Database.database().reference().child("Users").child(uid).observeSingleEvent(of: .value, with: {
-            snapshot in
-            if let dict = snapshot.value as? [String: Any] {
-                let user = User.transformUser(dict: dict)
-              self.users.append(user)
-                completed()
-            }
-        })
+
+
+func fetchUser(uid: String, completed: @escaping () -> Void) {
+    Api.User.observeUser(withId: uid) { (user) in
+        self.users.append(user)
+        completed()
     }
-  
+}
     
-  
     
     @IBAction func logoutButtonTapped(_ sender: Any) {
         do {
