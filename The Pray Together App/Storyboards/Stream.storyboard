@@ -65,7 +65,10 @@
                                                         <constraint firstAttribute="width" constant="23" id="iXU-1j-dHR"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                    <state key="normal" image="person-with-folded-hands_1f64f"/>
+                                                    <state key="normal" image="prayedForselected1"/>
+                                                    <connections>
+                                                        <action selector="prayedForButtonTapped:" destination="sJp-2A-HiE" eventType="touchUpInside" id="cSs-8W-Azj"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1XQ-yg-Tqu">
                                                     <rect key="frame" x="309" y="152" width="23" height="23"/>
@@ -86,12 +89,6 @@
                                                         <constraint firstAttribute="height" constant="1" id="zBo-7P-Zdu"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Be the first to pray for this" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cA-Jz-6jh">
-                                                    <rect key="frame" x="10" y="191" width="141.5" height="16"/>
-                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygi-wl-C7u">
                                                     <rect key="frame" x="10" y="217" width="42" height="22.5"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
@@ -106,6 +103,19 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                                     <state key="normal" image="ribbon"/>
+                                                    <connections>
+                                                        <action selector="bookmarkButtonTapped:" destination="sJp-2A-HiE" eventType="touchUpInside" id="TDM-SU-NgK"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gct-WH-PtR">
+                                                    <rect key="frame" x="10" y="186" width="118" height="27"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="EGT-wH-jLE"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
+                                                    <state key="normal" title="Be the first to pray for this">
+                                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    </state>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -114,20 +124,20 @@
                                                 <constraint firstItem="EJt-bf-q5J" firstAttribute="leading" secondItem="Sc3-Mw-igq" secondAttribute="leading" id="6bV-X7-N93"/>
                                                 <constraint firstItem="ygi-wl-C7u" firstAttribute="leading" secondItem="4iK-9h-I5g" secondAttribute="leading" constant="10" id="7hK-YZ-Mcr"/>
                                                 <constraint firstItem="Qme-VA-fHy" firstAttribute="top" secondItem="4iK-9h-I5g" secondAttribute="top" constant="10" id="DdI-zz-E4X"/>
-                                                <constraint firstItem="6cA-Jz-6jh" firstAttribute="top" secondItem="cHs-t9-xIs" secondAttribute="bottom" constant="10" id="E2y-wE-S3l"/>
                                                 <constraint firstItem="cHs-t9-xIs" firstAttribute="leading" secondItem="4iK-9h-I5g" secondAttribute="leading" constant="10" id="Ere-c5-H2c"/>
                                                 <constraint firstItem="cHs-t9-xIs" firstAttribute="top" secondItem="EfF-70-Qwl" secondAttribute="bottom" constant="5" id="GAT-3E-jal"/>
                                                 <constraint firstItem="EfF-70-Qwl" firstAttribute="top" secondItem="EJt-bf-q5J" secondAttribute="bottom" constant="15" id="GmC-J8-Dm9"/>
                                                 <constraint firstAttribute="trailing" secondItem="EfF-70-Qwl" secondAttribute="trailing" constant="10" id="LQP-Uf-xdY"/>
                                                 <constraint firstItem="EJt-bf-q5J" firstAttribute="top" secondItem="Sc3-Mw-igq" secondAttribute="bottom" constant="10" id="Pgk-yD-XoZ"/>
-                                                <constraint firstItem="6cA-Jz-6jh" firstAttribute="leading" secondItem="4iK-9h-I5g" secondAttribute="leading" constant="10" id="XH3-F8-yhr"/>
+                                                <constraint firstItem="gct-WH-PtR" firstAttribute="leading" secondItem="4iK-9h-I5g" secondAttribute="leading" constant="10" id="TVu-sm-n4P"/>
                                                 <constraint firstItem="0df-tU-hUr" firstAttribute="top" secondItem="EJt-bf-q5J" secondAttribute="bottom" constant="15" id="YLL-du-WK0"/>
                                                 <constraint firstAttribute="trailing" secondItem="cHs-t9-xIs" secondAttribute="trailing" constant="10" id="YdP-wd-3Jx"/>
+                                                <constraint firstItem="ygi-wl-C7u" firstAttribute="top" secondItem="gct-WH-PtR" secondAttribute="bottom" constant="10" id="ZfH-mX-enS"/>
                                                 <constraint firstItem="Qme-VA-fHy" firstAttribute="leading" secondItem="4iK-9h-I5g" secondAttribute="leading" constant="10" id="ZuC-Uf-0aL"/>
                                                 <constraint firstItem="1XQ-yg-Tqu" firstAttribute="leading" secondItem="0df-tU-hUr" secondAttribute="trailing" constant="10" id="aiw-WN-YTM"/>
                                                 <constraint firstItem="1XQ-yg-Tqu" firstAttribute="top" secondItem="EJt-bf-q5J" secondAttribute="bottom" constant="15" id="bvz-S9-A6d"/>
-                                                <constraint firstItem="ygi-wl-C7u" firstAttribute="top" secondItem="6cA-Jz-6jh" secondAttribute="bottom" constant="10" id="e3q-XO-Cag"/>
                                                 <constraint firstItem="EfF-70-Qwl" firstAttribute="leading" secondItem="1XQ-yg-Tqu" secondAttribute="trailing" constant="10" id="h3e-8O-dRa"/>
+                                                <constraint firstItem="gct-WH-PtR" firstAttribute="top" secondItem="cHs-t9-xIs" secondAttribute="bottom" constant="10" id="iah-R4-w8b"/>
                                                 <constraint firstItem="Sc3-Mw-igq" firstAttribute="top" secondItem="Qme-VA-fHy" secondAttribute="top" id="rK0-hB-gxf"/>
                                                 <constraint firstItem="Sc3-Mw-igq" firstAttribute="leading" secondItem="Qme-VA-fHy" secondAttribute="trailing" constant="10" id="seo-iC-ccb"/>
                                                 <constraint firstAttribute="bottom" secondItem="ygi-wl-C7u" secondAttribute="bottom" constant="10" id="tpw-iB-iVC"/>
@@ -138,8 +148,8 @@
                                             <outlet property="commentButton" destination="1XQ-yg-Tqu" id="sCe-71-rzt"/>
                                             <outlet property="commentLabel" destination="ygi-wl-C7u" id="7jV-Xz-DmC"/>
                                             <outlet property="prayedForButton" destination="EfF-70-Qwl" id="xan-lg-DOa"/>
+                                            <outlet property="prayedForCountButton" destination="gct-WH-PtR" id="PLA-m7-SjJ"/>
                                             <outlet property="prayerContentLabel" destination="EJt-bf-q5J" id="fgR-3H-kCS"/>
-                                            <outlet property="prayerCountLabel" destination="6cA-Jz-6jh" id="jKQ-rO-3Ox"/>
                                             <outlet property="profileImage" destination="Qme-VA-fHy" id="pyi-6R-Oom"/>
                                             <outlet property="usernameLabel" destination="Sc3-Mw-igq" id="4u7-T1-a56"/>
                                         </connections>
@@ -329,7 +339,7 @@
         <image name="comment" width="22" height="19"/>
         <image name="defaultProfileImage" width="102" height="102"/>
         <image name="feed-tabIcon" width="25" height="21"/>
-        <image name="person-with-folded-hands_1f64f" width="120" height="120"/>
+        <image name="prayedForselected1" width="2700" height="2700"/>
         <image name="ribbon" width="18" height="26"/>
     </resources>
     <color key="tintColor" red="0.55087739229999999" green="0.61406648159999999" blue="0.69024974110000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

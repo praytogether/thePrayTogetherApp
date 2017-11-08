@@ -32,7 +32,8 @@ class PrayerStreamViewController: UIViewController {
     func loadPrayers() {
         activityIndicator.startAnimating()
         Api.PrayerPost.observePrayers { (prayerPost) in
-            self.fetchUser(uid: prayerPost.sender!, completed: {
+            guard let prayerPostId = prayerPost.sender else { return }
+            self.fetchUser(uid: prayerPostId, completed: {
                 self.prayerPosts.append(prayerPost)
                 self.activityIndicator.stopAnimating()
                 self.prayerStreamTableView.reloadData()

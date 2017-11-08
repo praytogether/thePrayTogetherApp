@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 class PrayerPosts {
     var prayer: String?
@@ -14,6 +15,9 @@ class PrayerPosts {
     var creationDate: Double?
     var sender: String?
     var id: String?
+    var prayedForCount: Int?
+    var prayedFor: Dictionary <String, Any>?
+    var isPrayedFor: Bool?
     
 }
 
@@ -27,7 +31,15 @@ extension PrayerPosts {
         prayerPosts.username = dict["username"] as? String
         prayerPosts.creationDate = dict["creationDate"] as? Double
         prayerPosts.sender = dict["sender"] as? String
+        prayerPosts.prayedForCount = dict["prayedForCount"] as? Int
+        prayerPosts.prayedFor = dict["prayedFor"] as? Dictionary <String, Any>
+        if let currentUserId = Auth.auth().currentUser?.uid {
+        if prayerPosts.prayedFor != nil {
+            prayerPosts.isPrayedFor = prayerPosts.prayedFor![currentUserId] != nil
+            }
+        }
         return prayerPosts
     }
     
 }
+
