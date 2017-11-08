@@ -41,7 +41,24 @@ class PrayerStreamTableViewCell: UITableViewCell {
         
         prayerContentLabel.text = prayerPosts?.prayer
         
-        updatePrayedFor(prayerPosts: prayerPosts!)
+        Api.PrayerPost.REF_PRAYERPOSTS.child(prayerPosts!.id!).observeSingleEvent(of: .value, with: {
+            snapshot in
+            if let dict = snapshot.value as? [String: Any] {
+                let prayerPost = PrayerPosts.transformPrayer(dict: dict, key: snapshot.key)
+            self.updatePrayedFor(prayerPosts: prayerPost)
+        }
+    })
+        Api.PrayerPost.REF_PRAYERPOSTS.child(prayerPosts!.id!).observe(.childChanged, with: {
+            snapshot in
+            guard let value = snapshot.value as? Int else { return }
+                if value >= 2 {
+                    self.prayedForCountButton.setTitle("\(value) people have prayed for this", for: .normal)
+                } else if value == 1 {
+                    self.prayedForCountButton.setTitle("\(value) person has prayed for this", for: .normal)
+                } else {
+                        self.prayedForCountButton.setTitle("Be the first to pray for this", for: .normal)
+                }
+        })
     }
     
     func updatePrayedFor(prayerPosts: PrayerPosts) {
@@ -98,18 +115,18 @@ class PrayerStreamTableViewCell: UITableViewCell {
                 prayedFor = post["prayedFor"] as? [String : Bool] ?? [:]
                 var prayedForCount = post["prayedForCount"] as? Int ?? 0
                 if let _ = prayedFor[uid] {
-                    // Unstar the post and remove self from stars
+                    
                     prayedForCount -= 1
                     prayedFor.removeValue(forKey: uid)
                 } else {
-                    // Star the post and add self to stars
+                   
                     prayedForCount += 1
                     prayedFor[uid] = true
                 }
                 post["prayedForCount"] = prayedForCount as AnyObject?
                 post["prayedFor"] = prayedFor as AnyObject?
                 
-                // Set value and report transaction success
+
                 currentData.value = post
                 
                 return TransactionResult.success(withValue: currentData)
@@ -142,7 +159,7 @@ class PrayerStreamTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        // Configure the view for the selected state
+        
     }
     
 }
