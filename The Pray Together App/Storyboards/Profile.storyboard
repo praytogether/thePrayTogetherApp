@@ -5,25 +5,217 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Futura.ttc">
+            <string>Futura-Bold</string>
+            <string>Futura-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Profile-->
         <scene sceneID="GWT-DX-KmM">
             <objects>
                 <viewController id="diU-Vb-pVZ" customClass="ProfileViewController" customModule="The_Pray_Together_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7x8-Xp-I7V">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="prh-Kl-glB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="mzM-V8-Wv7"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="zGz-Z2-cMh"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jld-jo-AD1">
+                                <rect key="frame" x="0.0" y="1" width="375" height="602"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6v3-n4-X0u">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="50" height="189"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PrayerCell" id="Y9Y-9A-Jmp">
+                                        <rect key="frame" x="0.0" y="189" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProfileHeader" id="aZx-bp-acx" customClass="ProfileHeaderCollectionReusableView" customModule="The_Pray_Together_App" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="189"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y3G-ZK-cVz">
+                                            <rect key="frame" x="10" y="10" width="100" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="DZn-uO-V4K"/>
+                                                <constraint firstAttribute="height" constant="100" id="GZw-Gr-brm"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="50"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHk-cq-Wpk">
+                                            <rect key="frame" x="120" y="10" width="108.5" height="26"/>
+                                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgv-Lb-MWR">
+                                            <rect key="frame" x="120" y="46" width="229" height="19.5"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z2S-CJ-V5L">
+                                            <rect key="frame" x="0.0" y="148" width="375" height="1"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="8bO-Kg-BHq"/>
+                                                <constraint firstAttribute="height" constant="1" id="vDD-0V-tP9"/>
+                                            </constraints>
+                                        </view>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Vn-Vu-6V7">
+                                            <rect key="frame" x="0.0" y="150" width="375" height="38"/>
+                                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                            <state key="normal" title="Edit Profile"/>
+                                        </button>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="kSX-ht-Mnv">
+                                            <rect key="frame" x="120" y="109" width="229" height="29"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HGc-CC-LUV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="66.5" height="29"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9JW-Nm-bOK">
+                                                            <rect key="frame" x="23" y="0.0" width="20" height="14.5"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="11"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prayers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U01-6F-6bu">
+                                                            <rect key="frame" x="10" y="14.5" width="46" height="14.5"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="11"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Adc-HY-O2f">
+                                                    <rect key="frame" x="81.5" y="0.0" width="66" height="29"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhX-J6-6K5">
+                                                            <rect key="frame" x="23" y="0.0" width="20" height="14.5"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="11"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWx-v1-cMp">
+                                                            <rect key="frame" x="4.5" y="14.5" width="57" height="14.5"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="11"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <viewLayoutGuide key="safeArea" id="LWT-Gy-wNN"/>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fm7-G5-lWT">
+                                                    <rect key="frame" x="162.5" y="0.0" width="66.5" height="29"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mbi-Au-ZlC">
+                                                            <rect key="frame" x="23.5" y="0.0" width="20" height="14.5"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="11"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Following" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owr-c7-haD">
+                                                            <rect key="frame" x="4.5" y="14.5" width="57.5" height="14.5"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="11"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <viewLayoutGuide key="safeArea" id="sRK-DB-wdj"/>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k58-98-gai">
+                                            <rect key="frame" x="10" y="118.5" width="79.5" height="19.5"/>
+                                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="15"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.091001167889999998" green="0.23417572680000001" blue="0.2863805592" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstItem="4Vn-Vu-6V7" firstAttribute="leading" secondItem="aZx-bp-acx" secondAttribute="leading" id="2W3-a0-FDe"/>
+                                        <constraint firstItem="k58-98-gai" firstAttribute="leading" secondItem="y3G-ZK-cVz" secondAttribute="leading" id="2fb-Y6-f36"/>
+                                        <constraint firstItem="EHk-cq-Wpk" firstAttribute="top" secondItem="y3G-ZK-cVz" secondAttribute="top" id="37S-Zq-es1"/>
+                                        <constraint firstItem="vgv-Lb-MWR" firstAttribute="leading" secondItem="y3G-ZK-cVz" secondAttribute="trailing" constant="10" id="5m2-lF-Qqp"/>
+                                        <constraint firstItem="Z2S-CJ-V5L" firstAttribute="leading" secondItem="aZx-bp-acx" secondAttribute="leadingMargin" id="7t8-85-vLL"/>
+                                        <constraint firstItem="k58-98-gai" firstAttribute="leading" secondItem="aZx-bp-acx" secondAttribute="leading" constant="10" id="BSc-yD-dOj"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="vgv-Lb-MWR" secondAttribute="trailing" constant="10" id="CLX-UH-b0Q"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="kSX-ht-Mnv" secondAttribute="trailing" constant="10" id="Cb3-xo-Gmc"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Z2S-CJ-V5L" secondAttribute="trailing" id="Ecq-bi-Cjf"/>
+                                        <constraint firstItem="EHk-cq-Wpk" firstAttribute="leading" secondItem="y3G-ZK-cVz" secondAttribute="trailing" constant="10" id="Ial-hj-WIe"/>
+                                        <constraint firstItem="kSX-ht-Mnv" firstAttribute="leading" secondItem="y3G-ZK-cVz" secondAttribute="trailing" constant="10" id="Nle-2y-ch5"/>
+                                        <constraint firstItem="y3G-ZK-cVz" firstAttribute="leading" secondItem="aZx-bp-acx" secondAttribute="leading" constant="10" id="OsP-KC-dGh"/>
+                                        <constraint firstAttribute="bottom" secondItem="4Vn-Vu-6V7" secondAttribute="bottom" constant="1" id="V1O-R3-fYj"/>
+                                        <constraint firstItem="Z2S-CJ-V5L" firstAttribute="top" secondItem="k58-98-gai" secondAttribute="bottom" constant="10" id="VdQ-pa-e6R"/>
+                                        <constraint firstItem="vgv-Lb-MWR" firstAttribute="top" secondItem="EHk-cq-Wpk" secondAttribute="bottom" constant="10" id="W2a-XH-fNW"/>
+                                        <constraint firstAttribute="trailing" secondItem="4Vn-Vu-6V7" secondAttribute="trailing" id="YXJ-11-nFS"/>
+                                        <constraint firstItem="Z2S-CJ-V5L" firstAttribute="top" secondItem="kSX-ht-Mnv" secondAttribute="bottom" constant="10" id="aBo-a6-GcK"/>
+                                        <constraint firstAttribute="trailing" secondItem="Z2S-CJ-V5L" secondAttribute="trailing" id="cHU-78-EF0"/>
+                                        <constraint firstItem="4Vn-Vu-6V7" firstAttribute="top" secondItem="Z2S-CJ-V5L" secondAttribute="bottom" constant="1" id="eoM-gf-Kmn"/>
+                                        <constraint firstItem="Z2S-CJ-V5L" firstAttribute="leading" secondItem="aZx-bp-acx" secondAttribute="leading" id="fey-RE-hMr"/>
+                                        <constraint firstItem="y3G-ZK-cVz" firstAttribute="top" secondItem="aZx-bp-acx" secondAttribute="top" constant="10" id="okt-NN-Y9T"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="bioLabel" destination="vgv-Lb-MWR" id="ueU-yk-DYy"/>
+                                        <outlet property="editProfileButton" destination="4Vn-Vu-6V7" id="mLK-Pf-Qgn"/>
+                                        <outlet property="followerCountLabel" destination="UhX-J6-6K5" id="BLj-2k-g9l"/>
+                                        <outlet property="followingCountLabel" destination="Mbi-Au-ZlC" id="7PT-2n-QLp"/>
+                                        <outlet property="fullNameLabel" destination="EHk-cq-Wpk" id="Zye-rY-QJw"/>
+                                        <outlet property="prayerCountLabel" destination="9JW-Nm-bOK" id="2gf-zQ-XOU"/>
+                                        <outlet property="profileImage" destination="y3G-ZK-cVz" id="oxi-Zw-fyG"/>
+                                        <outlet property="usernameLabel" destination="k58-98-gai" id="YJg-GB-PCA"/>
+                                    </connections>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="prh-Kl-glB" firstAttribute="leading" secondItem="qjg-1H-xG4" secondAttribute="leading" id="M2B-t0-Jr0"/>
+                            <constraint firstItem="qjg-1H-xG4" firstAttribute="trailing" secondItem="prh-Kl-glB" secondAttribute="trailing" id="Mse-Lj-KGu"/>
+                            <constraint firstItem="prh-Kl-glB" firstAttribute="trailing" secondItem="qjg-1H-xG4" secondAttribute="trailing" id="YsD-Db-DoG"/>
+                            <constraint firstItem="jld-jo-AD1" firstAttribute="leading" secondItem="qjg-1H-xG4" secondAttribute="leading" id="Z8C-lI-daK"/>
+                            <constraint firstItem="prh-Kl-glB" firstAttribute="leading" secondItem="qjg-1H-xG4" secondAttribute="leading" id="ZDE-CJ-VWj"/>
+                            <constraint firstItem="prh-Kl-glB" firstAttribute="top" secondItem="qjg-1H-xG4" secondAttribute="top" id="bgS-fi-FST"/>
+                            <constraint firstItem="jld-jo-AD1" firstAttribute="top" secondItem="prh-Kl-glB" secondAttribute="bottom" id="k4S-tN-dhv"/>
+                            <constraint firstItem="qjg-1H-xG4" firstAttribute="trailing" secondItem="jld-jo-AD1" secondAttribute="trailing" id="snC-Ph-Nme"/>
+                            <constraint firstItem="qjg-1H-xG4" firstAttribute="bottom" secondItem="jld-jo-AD1" secondAttribute="bottom" id="ze6-7t-8Qv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="qjg-1H-xG4"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="T2m-3d-bwh"/>
+                    <connections>
+                        <outlet property="profileCollectionView" destination="jld-jo-AD1" id="hLS-CU-49R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RO6-rh-1BK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2588" y="-254"/>
+            <point key="canvasLocation" x="2588" y="-254.12293853073464"/>
         </scene>
         <!--Profile-->
         <scene sceneID="uaC-Bb-dY7">
@@ -31,7 +223,7 @@
                 <navigationController storyboardIdentifier="NavigationProfile" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YvT-yO-YG3" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="me-tabIcon" id="eRb-Yv-Iwu"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Olu-rn-6tS">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Olu-rn-6tS">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.091001167889999998" green="0.23417572680000001" blue="0.2863805592" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

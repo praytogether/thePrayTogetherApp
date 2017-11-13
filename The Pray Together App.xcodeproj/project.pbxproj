@@ -38,6 +38,8 @@
 		F10CDA981FB160C70087736E /* Post_CommentsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10CDA971FB160C70087736E /* Post_CommentsApi.swift */; };
 		F10D51801FA7928F00BEC6A9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D517F1FA7928F00BEC6A9 /* AuthService.swift */; };
 		F10D51841FA7EE3E00BEC6A9 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D51831FA7EE3E00BEC6A9 /* DataServices.swift */; };
+		F121620C1FBA014900E667A2 /* ProfileHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F121620B1FBA014900E667A2 /* ProfileHeaderCollectionReusableView.swift */; };
+		F121620E1FBA275600E667A2 /* UserPostApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F121620D1FBA275600E667A2 /* UserPostApi.swift */; };
 		F143D98E1FAD0EFF009B5E69 /* Prayer Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F143D98D1FAD0EFF009B5E69 /* Prayer Posts.swift */; };
 		F143D9901FAE0603009B5E69 /* PrayerStreamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F143D98F1FAE0603009B5E69 /* PrayerStreamTableViewCell.swift */; };
 		F143D9921FAE2F45009B5E69 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = F143D9911FAE2F45009B5E69 /* Users.swift */; };
@@ -79,6 +81,8 @@
 		F10CDA971FB160C70087736E /* Post_CommentsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post_CommentsApi.swift; sourceTree = "<group>"; };
 		F10D517F1FA7928F00BEC6A9 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F10D51831FA7EE3E00BEC6A9 /* DataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
+		F121620B1FBA014900E667A2 /* ProfileHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		F121620D1FBA275600E667A2 /* UserPostApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostApi.swift; sourceTree = "<group>"; };
 		F143D98D1FAD0EFF009B5E69 /* Prayer Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Prayer Posts.swift"; sourceTree = "<group>"; };
 		F143D98F1FAE0603009B5E69 /* PrayerStreamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerStreamTableViewCell.swift; sourceTree = "<group>"; };
 		F143D9911FAE2F45009B5E69 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
@@ -244,6 +248,7 @@
 				F10CDA931FB15B400087736E /* Api.swift */,
 				F10CDA951FB15C1B0087736E /* CommentApi.swift */,
 				F10CDA971FB160C70087736E /* Post_CommentsApi.swift */,
+				F121620D1FBA275600E667A2 /* UserPostApi.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -262,6 +267,7 @@
 			children = (
 				F143D98F1FAE0603009B5E69 /* PrayerStreamTableViewCell.swift */,
 				F10CDA861FB0AEA70087736E /* CommentsTableViewCell.swift */,
+				F121620B1FBA014900E667A2 /* ProfileHeaderCollectionReusableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -438,6 +444,7 @@
 				F143D98E1FAD0EFF009B5E69 /* Prayer Posts.swift in Sources */,
 				F10CDA891FB0B0160087736E /* CommentViewController.swift in Sources */,
 				F10C75011FA4EA5C00A81A24 /* SignInViewController.swift in Sources */,
+				F121620C1FBA014900E667A2 /* ProfileHeaderCollectionReusableView.swift in Sources */,
 				F10C75171FA51B5500A81A24 /* bindToKeyboard.swift in Sources */,
 				F143D9921FAE2F45009B5E69 /* Users.swift in Sources */,
 				F10CDA961FB15C1B0087736E /* CommentApi.swift in Sources */,
@@ -453,6 +460,7 @@
 				F10C74E61FA3EC8E00A81A24 /* AppDelegate.swift in Sources */,
 				F10CDA901FB118890087736E /* PrayerPostApi.swift in Sources */,
 				F10C75091FA4FB8500A81A24 /* PrayerStreamViewController.swift in Sources */,
+				F121620E1FBA275600E667A2 /* UserPostApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

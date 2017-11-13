@@ -12,7 +12,7 @@
         <scene sceneID="zQp-qd-jDR">
             <objects>
                 <tabBarController storyboardIdentifier="TabBarId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hNP-h3-vPi" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3I7-MW-Dn8">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="3I7-MW-Dn8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

@@ -9,27 +9,45 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+//OUTLETS
+    @IBOutlet weak var profileCollectionView: UICollectionView!
+    
+    var user: User!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       profileCollectionView.dataSource = self
+        fetchUser()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func fetchUser() {
+        Api.User.observeCurrentUser { (user) in
+           self.user = user
+            self.profileCollectionView.reloadData()
+        }
+    }
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension ProfileViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
     }
-    */
-
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PrayerCell", for: indexPath)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerViewCell = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "ProfileHeader", for: indexPath) as! ProfileHeaderCollectionReusableView
+        if let user = self.user {
+             headerViewCell.user = user 
+        }
+       
+        return headerViewCell
+    }
+    
 }

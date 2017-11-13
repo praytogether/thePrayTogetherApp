@@ -15,6 +15,7 @@ class CommentViewController: UIViewController {
     @IBOutlet weak var commentTextField: UITextField!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var commentTableView: UITableView!
+    @IBOutlet weak var constraintToBottom: NSLayoutConstraint!
     
     var postId: String!
     var comments = [Comments]()
@@ -23,15 +24,42 @@ class CommentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Comment"
-        commentTextField.bindToKeyboard()
-        sendButton.bindToKeyboard()
-        hideKeyboardWhenTappedAround()
+  
         sendButton.isEnabled = false
+        empty()
         handleTextField()
         loadComments()
         commentTableView.dataSource = self
         commentTableView.estimatedRowHeight = 80
         commentTableView.rowHeight = UITableViewAutomaticDimension
+        commentTextField.bindToKeyboard()
+        sendButton.bindToKeyboard()
+        commentViewContainer.bindToKeyboard()
+        hideKeyboardWhenTappedAround()
+        
+//        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
+    @objc func keyboardWillShow(_ notification: NSNotification) {
+        print(notification)
+        let keyboardFrame = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as AnyObject).cgRectValue
+        UIView.animate(withDuration: 0.3) {
+            self.constraintToBottom.constant = keyboardFrame!.height
+            self.view.layoutIfNeeded()
+            
+        }
+    }
+    @objc func keyboardWillHide(_ notification: NSNotification) {
+        UIView.animate(withDuration: 0.3) {
+            self.constraintToBottom.constant = 0
+            self.view.layoutIfNeeded()
+            
+        }
     }
     
     func loadComments() {
@@ -99,6 +127,7 @@ class CommentViewController: UIViewController {
                 }
             })
             self.empty()
+            self.view.endEditing(true)
         }
     }
     

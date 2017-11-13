@@ -13,4 +13,5 @@ struct Api {
     static var PrayerPost = PrayerPostApi()
     static var Comment = CommentApi()
     static var Post_Comment = Post_CommentApi()
+    static var MyPrayerPosts = MyPrayerPostApi()
 }
